@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif|Roboto" rel="stylesheet">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
@@ -77,18 +77,45 @@
     		padding-top: 70px;
     		background-color: #FFF;
     	}
-    	#educationSection h1
+    	#educationTitle
     	{
-    		width: 88px;
-    		font-size: 95%;
+    		width: 115px;
+    		font-size: 1.2em;
     		border-bottom: 3px #11ABB0 solid;
     		padding-bottom: 5px;
-    		float:right;
     		font-weight: bold;
+    		float:left;
+    		margin-bottom: 20px;
     	}
     	#educationSection h3
     	{
-  
+  			font-size: 1.4em;
+    	}
+    	.schoolData
+    	{
+    		color:grey;
+    		margin-bottom: 25px;
+    	}
+    	.collegeDegree
+    	{
+    		font-style: italic;
+    		font-family: 'PT Serif', serif;
+    	}
+    	#moreTitle
+    	{
+    		width: 63px;
+    		font-size: 1.2em;
+    		border-bottom: 3px #11ABB0 solid;
+    		padding-bottom: 5px;
+    		font-weight: bold;
+    		float:left;
+    		margin-bottom: 20px;
+    	}
+    	.descriptionTitle
+    	{
+    		color:#636363;
+    		font-size: 1em;
+    		font-weight: bold;
     	}
 	</style>
   </head>
@@ -132,12 +159,12 @@
 	<!-- Seccion About -->
 	<div class="container" id="aboutSection">
 		<div class="row">
-		  <div class="col-4">
+		  <div class="col-sm-4">
 		  	<p id="iconoUsuario">
 		  		<i class="fa fa-user-circle" aria-hidden="true"></i>
 		  	</p>
 		  </div>
-		  <div class="col-8">
+		  <div class="col-sm-8">
 		  	<h2>About Me</h2>
 		  	<p>
 				Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Nullam dictum felis eu pede mollis pretium.
@@ -148,23 +175,86 @@
 
 	<!-- Education Section-->
 	<div class="container-fluid" id="educationSection">
+		<!-- Fila Educacion -->
 		<div class="row">
-		  <div class="col-4">
-		  	<p id="educationTitle">
-		  		<h1>EDUCATION</h1>
+		<div class="col-sm-2">
+		</div>
+		  <div class="col-md-2">
+		  	<p>
+		  		<h1 id="educationTitle">EDUCATION</h1>
 		  	</p>
 		  </div>
-		  <div class="col-8">
-		  	<h3>Facultad de Ingeniería Mecanica y Electrica</h3>
-		  	<p>
-		  		Engineering of Software • 6th Semester
+		  <div class="col-sm-8">
+		  	<h3>Facultad de Ingeniería Mecánica y Eléctrica</h3>
+		  	<p class="schoolData">
+		  		<span class="collegeDegree">Engineering of Software</span> • 6th Semester
 		  	</p>
 
 		  	<h3>Escuela Industrial y Preparatoria Técnica Alvaro Obregón</h3>
-		  	<p>
-		  		B.T Web Programming • 2012-2015
+		  	<p class="schoolData">
+		  		<span class="collegeDegree">B.T Web Programming</span> • 2012-2015
 		  	</p>
-		  	
+
+		  	<h3>Escuela Secundaria Técnica #33</h3>
+		  	<p class="schoolData">
+		  		<span class="collegeDegree">Electronics Technician</span> • 2009-2012
+		  	</p>
+		  </div>
+		</div>
+
+		<hr class="my-4">
+
+		<!-- Fila Extracurricular-->
+		<div class="row">
+		<div class="col-sm-2">
+		</div>
+		  <div class="col-md-2">
+		  	<p>
+		  		<h1 id="moreTitle">MORE</h1>
+		  	</p>
+		  </div>
+		  <div class="col-sm-8">
+		  	<h3>Development of Java Web Applications</h3>
+		  	<p class="schoolData">
+		  		<h2 class="descriptionTitle">Technologies used</h2>
+			  	<ul>
+			  		<li>JavaServer Pages Technology</li>
+					<li>Java Server Faces</li>
+					<li>XHTML & XML</li>
+					<li>Cascading Style Sheets (CSS y CSS3)</li>
+					<li>EJB 3.0 Session Beans</li>
+					<li>AJAX</li>
+					<li>PL-SQL</li>
+					<li>Java Persistence API (JPA)</li>
+					<li>Javascript</li>
+					<li>Java EE Applications and Messaging</li>
+					<li>Message-Driven Beans</li>
+					<li>Web Service Model & Web Services</li>
+					<li>jQuery</li>
+				</ul>
+				<h2 class="descriptionTitle">Programming paradigm</h2>
+				<ul>
+					<li>Object-oriented programming</li>
+				</ul>
+				<h2 class="descriptionTitle">Design Pattern</h2>
+				<ul>
+					<li>MVC (Model View Controller)</li>
+				</ul>
+				<h2 class="descriptionTitle">Design Pattern</h2>
+				<p>
+					<img
+				</p>
+		  	</p>
+
+		  	<h3>Escuela Industrial y Preparatoria Técnica Alvaro Obregón</h3>
+		  	<p class="schoolData">
+		  		<span class="collegeDegree">B.T Web Programming</span> • 2012-2015
+		  	</p>
+
+		  	<h3>Escuela Secundaria Técnica #33</h3>
+		  	<p class="schoolData">
+		  		<span class="collegeDegree">Electronics Technician</span> • 2009-2012
+		  	</p>
 		  </div>
 		</div>
 	</div>
