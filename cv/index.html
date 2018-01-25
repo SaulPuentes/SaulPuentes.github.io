@@ -8,6 +8,9 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
 
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
@@ -20,7 +23,7 @@
     		padding: 0;
     		background-color: #2B2B2B;
     	}
-    	#home
+    	#homeSection
     	{	
     		background: url('img/home-background.jpg');
     		background-size: cover;
@@ -30,39 +33,67 @@
    			margin-bottom: 0;
    			height: 95vh;
     	}
-    	#home h1
+    	#homeSection h1
     	{
-    		margin-top: 50px;
+    		margin-top: 30px;
+    		margin-bottom: 20px;
+    		color: white;
+    		font-family: 'PT Sans', sans-serif;
+    	}
+    	#homeSection strong
+    	{
     		color: white;
     	}
-    	#home strong
+    	.iconoFlecha
     	{
-    		color: white;
-    	}
-    	.btn-go
-    	{
+    		cursor:pointer;
     		margin-top: 25px;
     		font-size: 300%;
     	}
-    	.btn-go i:hover
+    	.iconoFlecha i:hover
     	{
-    		color:#a1e0a3;
+    		color:#f7ad36;
     	}
-    	#about
+    	#aboutSection
     	{	
-    		padding-top: 100px;
-    		color: white;
+    		padding-top: 70px;
+    		color: #a5a5a5;
     		height: 500px;
     		background-color: #2B2B2B;
+   			margin-bottom: 50px;
+
     	}
-    	#user-icon
+    	#aboutSection h2
     	{
-    		font-size: 300%;
+    		color:#F9F9F9;
+    	}
+    	#iconoUsuario
+    	{
+    		font-size: 600%;
     		text-align: center;
+    	}
+    	#educationSection
+    	{
+    		padding-top: 70px;
+    		background-color: #FFF;
+    	}
+    	#educationSection h1
+    	{
+    		width: 88px;
+    		font-size: 95%;
+    		border-bottom: 3px #11ABB0 solid;
+    		padding-bottom: 5px;
+    		float:right;
+    		font-weight: bold;
+    	}
+    	#educationSection h3
+    	{
+  
     	}
 	</style>
   </head>
   <body>
+  	<!-- Navbar -->
   	<div class="container-fluid">
       <nav id="navbar-example" class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
 	  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -89,32 +120,55 @@
 	</nav>
 	</div>
 
-
-	<div id="home" class="jumbotron">
+	<!-- Seccion Home-->
+	<div id="homeSection" class="jumbotron">
 	  <h1 class="display-3">Hi, I'm Saul Puentes!</h1>
-	  <p class="lead">I'm a <strong>Web Developer</strong>, <strong>engineering software</strong> student at FIME-UANL and <strong>graphic design</strong> enthusiast. </p>
-	  <p class="btn-go">
+	  <p class="lead">I'm a <strong>Web Developer</strong>, <strong>engineering software</strong> student and <strong>graphic design</strong> enthusiast, nice to meet you. </p>
+	  <p class="iconoFlecha">
 	    <strong><i class="fa fa-chevron-circle-down" aria-hidden="true"></i></strong>
 	  </p>
 	</div>
 
-	<div class="container-fluid">
-		<div class="container" id="about">
-			<div class="row">
-			  <div class="col-4">
-			  	<p id="user-icon">
-			  		<i class="fa fa-user-circle-o" aria-hidden="true"></i>
-			  	</p>
-			  </div>
-			  <div class="col-8">
-			  	<p>
-			  		¿Qué es Lorem Ipsum?
-					Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.
-				</p>
-			  </div>
-			</div>
+	<!-- Seccion About -->
+	<div class="container" id="aboutSection">
+		<div class="row">
+		  <div class="col-4">
+		  	<p id="iconoUsuario">
+		  		<i class="fa fa-user-circle" aria-hidden="true"></i>
+		  	</p>
+		  </div>
+		  <div class="col-8">
+		  	<h2>About Me</h2>
+		  	<p>
+				Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Nullam dictum felis eu pede mollis pretium.
+			</p>
+		  </div>
 		</div>
 	</div>
+
+	<!-- Education Section-->
+	<div class="container-fluid" id="educationSection">
+		<div class="row">
+		  <div class="col-4">
+		  	<p id="educationTitle">
+		  		<h1>EDUCATION</h1>
+		  	</p>
+		  </div>
+		  <div class="col-8">
+		  	<h3>Facultad de Ingeniería Mecanica y Electrica</h3>
+		  	<p>
+		  		Engineering of Software • 6th Semester
+		  	</p>
+
+		  	<h3>Escuela Industrial y Preparatoria Técnica Alvaro Obregón</h3>
+		  	<p>
+		  		B.T Web Programming • 2012-2015
+		  	</p>
+		  	
+		  </div>
+		</div>
+	</div>
+
 
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
