@@ -307,28 +307,6 @@
 	span.onclick = function() { 
 	  modal.style.display = "none";
 	}
-
-	// fadeInOutBoton
-	var mostrandoImg01 = true;
-	$("#fadeInOutBoton1").click(function()
-	{
-		if(mostrandoImg01)
-		{
-			$("#imgCdis").fadeOut(function()
-			{
-				mostrandoImg01 = false;
-			})
-			$("#fadeInOutBoton1").html("Mostrar imagen");
-		}
-		else
-		{
-			$("#imgCdis").fadeIn(function()
-			{
-				$("#fadeInOutBoton1").html("Ocultar imagen");
-				mostrandoImg01 = true;
-			})
-		}
-	});
     </script>
   </body>
 </html>
