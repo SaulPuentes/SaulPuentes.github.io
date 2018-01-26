@@ -140,21 +140,28 @@
     		text-align: center;
     		font-size: 1.1em;
     		color: #636363;
+    		margin-bottom: 20px;
     	}
     	#contactSection
     	{
     		padding: 50px 50px;
     	}
+    	.center {
+		    margin: auto;
+		    width: 80%;
+		    padding-left: 20px;
+		}
 
     	/* Modals Styles */
     	/* Style the Image Used to Trigger the Modal */
-		#myImg {
-		    border-radius: 5px;
-		    cursor: pointer;
+		.imgGallery
+		{
+			border-radius: 2px;
+			margin-bottom: 20px;
+			cursor: pointer;
 		    transition: 0.3s;
 		}
-
-		#myImg:hover {opacity: 0.7;}
+		.imgGallery:hover {opacity: 0.7;}
 
 		/* The Modal (background) */
 		.modal {
@@ -176,7 +183,7 @@
 		    margin: auto;
 		    display: block;
 		    width: 80%;
-		    max-width: 700px;
+		    max-width: 600px;
 		}
 
 		/* Caption of Modal Image (Image Text) - Same Width as the Image */
@@ -421,7 +428,39 @@
 	<div id="gallerySection" class="container-fluid">
 		<h1 id="galleryTitle"> CHECK OUT SOME OF MY WORKS. </h1>
 		<!-- Trigger the Modal -->
-		<img id="myImg" src="img/home-background.jpg" alt="Trolltunga, Norway" width="300" height="200">
+		
+
+		
+		<div class="row center">
+		  <div class="col">
+		  	<img class="imgGallery myImg" src="img/gallery-1.jpg" alt="Interference" width="200" height="200">
+		  </div>
+		  <div class="col">
+		  	<img class="imgGallery myImg"  src="img/gallery-2.jpg" alt="Interference" width="200" height="200">
+		  </div>
+		  <div class="col">
+		  	<img class="imgGallery myImg"  src="img/gallery-3.jpg" alt="Interference" width="200" height="200">
+		  </div>
+		  <div class="col">
+		  	<img class="imgGallery myImg"  src="img/gallery-4.jpg" alt="Interference" width="200" height="200">
+		  </div>
+		  <div class="col">
+		  	<img class="imgGallery myImg"  src="img/gallery-6.jpg" alt="Interference" width="200" height="200">
+		  </div>
+		  <div class="col">
+		  	<img class="imgGallery myImg"  src="img/gallery-7.jpg" alt="Interference" width="200" height="200">
+		  </div>
+		  <div class="col">
+		  	<img class="imgGallery myImg"  src="img/gallery-8.jpg" alt="Interference" width="200" height="200">
+		  </div>
+		  <div class="col">
+		  	<img class="imgGallery myImg"  src="img/gallery-5.jpg" alt="Interference" width="200" height="200">
+		  </div>
+		</div>
+
+		<div class="row center">
+		  
+		</div>
 
 		<!-- The Modal -->
 		<div id="myModal" class="modal">
@@ -435,6 +474,7 @@
 		  <!-- Modal Caption (Image Text) -->
 		  <div id="caption"></div>
 		</div>
+
 	</div>
 
 	<!-- Contact Section -->
@@ -450,18 +490,32 @@
 
     <!-- Javascript -->
     <script type="text/javascript">
+
+
     	// Get the modal
 		var modal = document.getElementById('myModal');
 
 		// Get the image and insert it inside the modal - use its "alt" text as a caption
-		var img = document.getElementById('myImg');
+		/*
+		var img = document.getElementById('myImg08');
 		var modalImg = document.getElementById("img01");
+
 		var captionText = document.getElementById("caption");
 		img.onclick = function(){
 		    modal.style.display = "block";
 		    modalImg.src = this.src;
 		    captionText.innerHTML = this.alt;
-		}
+		}*/
+		// Get the image and insert it inside the modal - use its "alt" text as a caption
+		var img = $('.myImg');
+		var modalImg = $("#img01");
+		var captionText = document.getElementById("caption");
+		$('.myImg').click(function(){
+		    modal.style.display = "block";
+		    var newSrc = this.src;
+		    modalImg.attr('src', newSrc);
+		    captionText.innerHTML = this.alt;
+		});
 
 		// Get the <span> element that closes the modal
 		var span = document.getElementsByClassName("close")[0];
