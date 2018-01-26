@@ -14,11 +14,271 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
-    <!-- CSS Styles-->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    
     <title>Saúl Puentes</title>
+    
+    <style type="text/css">
+    	body
+    	{
+    		margin:0;
+    		padding: 0;
+    		background-color: #2B2B2B;
+    		position: relative;
+    	}
+    	a{
+    		color:white;
+    	}
+    	#homeSection
+    	{	
+    		background: url('img/home-background.jpg');
+    		background-size: cover;
+    		text-align: center;
+    		margin-top: 50px;
+    		color: lightgray;
+   			margin-bottom: 0;
+   			height: 95vh;
+    	}
+    	#homeSection h1
+    	{
+    		margin-top: 30px;
+    		margin-bottom: 20px;
+    		color: white;
+    		font-family: 'PT Sans', sans-serif;
+    	}
+    	#homeSection strong
+    	{
+    		color: white;
+    	}
+    	#shortDescription
+    	{
+    		font-style: italic;
+    		font-family: 'PT Serif', serif;
+    		text-align: center;
+    	}
+    	.iconoFlecha
+    	{
+    		cursor:pointer;
+    		margin-top: 25px;
+    		font-size: 300%;
+    	}
+    	.iconoFlecha i:hover
+    	{
+    		color:#0275D8;
+    	}
+    	#aboutSection
+    	{	
+    		padding-top: 70px;
+    		color: #a5a5a5;
+    		height: 500px;
+    		background-color: #2B2B2B;
+   			margin-bottom: 50px;
 
+    	}
+    	#aboutSection h2
+    	{
+    		color:#F9F9F9;
+    	}
+    	#imgAvatar
+    	{
+    		-webkit-filter: grayscale(90%); 
+    		filter: grayscale(90%);
+    		display: block;
+    		margin:0 auto;
+    		width: 150px;
+    		border-radius: 50%;
+    	}
+    	#educationSection
+    	{
+    		padding-top: 70px;
+    		background-color: #FFF;
+    		padding-bottom: 50px;
+    	}
+    	.educationSectionTitle
+    	{
+    		font-size: 1.2em;
+    		border-bottom: 3px #11ABB0 solid;
+    		padding-bottom: 5px;
+    		font-weight: bold;
+    		float:left;
+    		margin-bottom: 20px;
+    	}
+    	#educationTitle
+    	{
+    		width: 115px;
+    	}
+    	#educationSection h3
+    	{
+  			font-size: 1.4em;
+    	}
+    	.schoolData
+    	{
+    		color:grey;
+    		margin-bottom: 25px;
+    	}
+    	.collegeDegree
+    	{
+    		font-style: italic;
+    		font-family: 'PT Serif', serif;
+    	}
+    	#moreTitle
+    	{
+    		width: 60px;
+    	}
+    	.descriptionTitle
+    	{
+    		color:#636363;
+    		font-size: 1em;
+    		font-weight: bold;
+    	}
+    	#skillsTitle
+    	{
+    		width: 63px;
+    	}
+    	.progress-bar
+    	{
+    		height: 30px; 
+    		background-color:#313131;
+    	}
+    	.progress-barTitle
+    	{
+    		font-size: 1.3em;
+    		margin-top: 8px;
+    		margin-bottom: 2px;
+    	}
+    	#gallerySection
+    	{
+    		padding: 50px 50px;
+    		background-color: #EBEEEE;
+    	}
+    	#galleryTitle
+    	{
+    		text-align: center;
+    		font-size: 1.1em;
+    		color: #636363;
+    		margin-bottom: 20px;
+    	}
+    	#contactSection
+    	{
+    		text-align: center;
+    		padding-top: 50px;
+    		padding-bottom: 10px;
+    	}
+    	.center {
+		    margin: auto;
+		    width: 80%;
+		    padding-left: 20px;
+		}
+		#contactTitle
+		{
+			font-size: 1.9em;
+			color: white;
+			margin-bottom: 40px;
+		}
+		.iconContact
+		{
+			font-size: 1.3em;
+			color: grey;
+		}
+		.infoContact
+		{
+			margin-left: 5px;
+			margin-right: 15px;
+			font-family: Verdana, Geneva, sans-serif;
+			font-size: 18px;
+			color: #cccccc;
+		}
+		#copyright
+		{
+			font-size: 15px;
+			margin-top: 80px;
+			font-family: Georgia, serif;
+			color:#606060;
+		}
+		.imgEducation
+		{
+			margin-left:20px;
+		}
+    	/* Modals Styles */
+    	/* Style the Image Used to Trigger the Modal */
+		.imgGallery
+		{
+			border-radius: 2px;
+			margin-bottom: 20px;
+			cursor: pointer;
+		    transition: 0.3s;
+		}
+		.imgGallery:hover {opacity: 0.7;}
+
+		/* The Modal (background) */
+		.modal {
+		    display: none; /* Hidden by default */
+		    position: fixed; /* Stay in place */
+		    z-index: 1; /* Sit on top */
+		    padding-top: 100px; /* Location of the box */
+		    left: 0;
+		    top: 0;
+		    width: 100%; /* Full width */
+		    height: 100%; /* Full height */
+		    overflow: auto; /* Enable scroll if needed */
+		    background-color: rgb(0,0,0); /* Fallback color */
+		    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+		}
+
+		/* Modal Content (Image) */
+		.modal-content {
+		    margin: auto;
+		    display: block;
+		    width: 80%;
+		    max-width: 600px;
+		}
+
+		/* Caption of Modal Image (Image Text) - Same Width as the Image */
+		#caption {
+		    margin: auto;
+		    display: block;
+		    width: 80%;
+		    max-width: 700px;
+		    text-align: center;
+		    color: #ccc;
+		    padding: 10px 0;
+		    height: 150px;
+		}
+
+		/* Add Animation - Zoom in the Modal */
+		.modal-content, #caption { 
+		    animation-name: zoom;
+		    animation-duration: 0.6s;
+		}
+
+		@keyframes zoom {
+		    from {transform:scale(0)} 
+		    to {transform:scale(1)}
+		}
+
+		/* The Close Button */
+		.close {
+		    position: absolute;
+		    top: 55px;
+		    right: 35px;
+		    color: #f1f1f1;
+		    font-size: 40px;
+		    font-weight: bold;
+		    transition: 0.3s;
+		}
+
+		.close:hover,
+		.close:focus {
+		    color: #bbb;
+		    text-decoration: none;
+		    cursor: pointer;
+		}
+
+		/* 100% Image Width on Smaller Screens */
+		@media only screen and (max-width: 700px){
+		    .modal-content {
+		        width: 100%;
+		    }
+		}
+	</style>
   </head>
   <body data-spy="scroll" data-target="#navbar-example" data-offset="50">
   	<!-- Navbar -->
@@ -286,27 +546,29 @@
 
     <!-- Javascript -->
     <script type="text/javascript">
-	// Get the modal
-	var modal = document.getElementById('myModal');
 
-	// Get the image and insert it inside the modal - use its "alt" text as a caption
-	var img = $('.myImg');
-	var modalImg = $("#img01");
-	var captionText = document.getElementById("caption");
-	$('.myImg').click(function(){
-	    modal.style.display = "block";
-	    var newSrc = this.src;
-	    modalImg.attr('src', newSrc);
-	    captionText.innerHTML = this.alt;
-	});
 
-	// Get the <span> element that closes the modal
-	var span = document.getElementsByClassName("close")[0];
+    	// Get the modal
+		var modal = document.getElementById('myModal');
 
-	// When the user clicks on <span> (x), close the modal
-	span.onclick = function() { 
-	  modal.style.display = "none";
-	}
+		// Get the image and insert it inside the modal - use its "alt" text as a caption
+		var img = $('.myImg');
+		var modalImg = $("#img01");
+		var captionText = document.getElementById("caption");
+		$('.myImg').click(function(){
+		    modal.style.display = "block";
+		    var newSrc = this.src;
+		    modalImg.attr('src', newSrc);
+		    captionText.innerHTML = this.alt;
+		});
+
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function() { 
+		  modal.style.display = "none";
+		}
     </script>
   </body>
 </html>
