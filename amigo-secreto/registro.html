@@ -13,15 +13,30 @@
         padding:0;
         margin:0;
       }
+      #instrucciones
+      {
+        text-align: center;
+        margin-top: 70px;
+      }
+      #instrucciones h1
+      {
+
+      }
+      #ajusteRadioButtons
+      {
+        margin-left: 12px;
+      }
     </style>
   </head>
   <body>
+
+    <!-- sNavbar -->
     <div class="container-fluid">
-      <nav class="navbar fixed-top navbar-toggleable-md navbar-light" style="background-color: #e3f2fd;">
+      <nav class="navbar fixed-top navbar-toggleable-md navbar-light">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="#"><img src="img/logo.png" width="110px"></a>
+        <a class="navbar-brand" href="#">Amigo Secreto</a>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
             <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
@@ -31,12 +46,132 @@
         </div>
       </nav>
     </div>
-    <div class="container">
-      <h1>Hello, world!</h1>
+
+    <!-- seccion Instrucciones -->
+    <div id="instrucciones" class="container">
+      <h1>Instrucciones</h1>
     </div>
+
+    <!-- seccion Formulario -->
+    <div id="formularioRegistro" class="container">
+      <h1>Registrarse</h1>
+      <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Correo electrónico</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Introduce un correo">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Confirmar correo electrónico</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+        </div>
+        <fieldset class="form-group">
+          <legend>Selecciona 5 opciones de regalo</legend>
+          <div id ="ajusteRadioButtons" class="form-check form-check-inline">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"> Bálsamo/Labial
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"> Blusa
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"> Bolsa de Caramelos
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"> Bolsa de Gomitas
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"> Chocolates
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"> Collar
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"> Dulces
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"> Globo de helio
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"> Peluche
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"> Reloj
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"> Rosas
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"> Termo para cafe
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"> Taza de cafe
+            </label>
+          </div>
+          <div class="form-check form-check-inline disabled">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled> 8-untrammelled
+            </label>
+          </div>
+        </fieldset>
+        <div class="form-group">
+          <label for="exampleTextarea">Comentarios</label>
+          <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="Agrega detalles acerca de los regalos como colores, marcas, tamaños, etc."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+      var opcionesMarcadas = 0;
+      $(function(){
+        $('input[type="checkbox"]').click(function(){
+          if ($(this).is(':checked'))
+          {
+            if (opcionesMarcadas<5){
+              opcionesMarcadas++;
+              alert("Checado");
+            }
+            else{
+              alert("Ya has seleccionado 5 opciones");
+              $(this).prop('checked',false);
+            }
+          }
+          else
+          {
+            opcionesMarcadas--;
+            alert("Desmarcado");
+          }
+        });
+      });
+    </script>
   </body>
 </html>
