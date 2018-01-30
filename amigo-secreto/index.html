@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <style type="text/css">
+      body
+      {
+        padding:0;
+        margin:0;
+      }
+      #icon
+      {
+        margin-right: 10px;
+      }
+      #inicio
+      {
+        background-image: url('img/background.jpg');
+        background-size: cover;
+        margin-top: 50px;
+        color: white;
+        text-align: center;
+      }
+      #inicio h1
+      {
+        text-shadow: 2px 2px #000;
+      }
+      .textoSombreado
+      {
+        text-shadow: 2px 2px 5px #000;
+      }
+      #inicio hr
+      {
+        background-color: white;
+      }
+      #instrucciones
+      {
+
+      }
+      #formulario
+      {
+        margin-bottom: 70px;
+      }
+      #ajusteRadioButtons
+      {
+        margin-left: 12px;
+      }
+      #footer
+      {
+        height: 400px;
+        background-color: #292B2C;
+      }
+      #carouselExampleSlidesOnly
+      {
+
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- sNavbar -->
+    <div class="container-fluid">
+      <nav class="navbar fixed-top navbar-toggleable-md navbar-inverse" style="background-color: #FF0000;">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#"><img id="icon" src="img/icon.png" width="40px">Amigo Secreto</a>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" href="#">Inicio</a>
+            <a class="nav-item nav-link" href="#">Instrucciones</a>
+            <a class="nav-item nav-link" href="#">Registro</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- seccion Inicio -->
+    <div id="inicio" class="jumbotron">
+      <h1 class="display-3">El amigo secreto</h1>
+      <p class="textoSombreado" class="lead">Esta es una dinámica organizada por los Acomodadores On Ice &copy; y para los Acomodadores On Ice &copy;.</p>
+      <hr class="my-4">
+      <p>Sábado 3 de Febrero a las 8:00pm se dará a conocer el amigo secreto.</p>
+      <p class="textoSombreado" class="lead">
+        <a class="btn btn-primary btn-lg" href="#" role="button">Inscríbete</a>
+      </p>
+    </div>
+
+    <!-- seccion Instrucciones -->
+    <div id="instrucciones" class="container">
+      <!--Apartado de instrucciones-->
+      <h1>Instrucciones</h1>
+      <ol>
+        <strong><li>Inscríbete</strong> escribiendo tu correo eléctronico en el formulario que se encuentra en la parte final de esta página.</li>
+        <strong><li>Selecciona</strong> al menos 5 objetos con significado especial para ti.</li>
+        <strong><li>Escribe</strong> en la sección de comentarios detalles acerca de los regalos. Ejemplo: Gomitas sabor durazno.</li>
+        <strong><li>Espera el día sábado 3 de Febrero</strong>.Te llegará un correo con el nombre de la persona y la lista de opciones para regalar.</li>
+      </ol>
+      <!--Apartado de reglas-->
+      <h1>Reglas</h1>
+      <ul>
+        <li>No regalar dinero.</li>
+        <li>El precio del regalo deberá ir de $100 a $150.</li>
+        <li>Tomar en cuenta las opciones seleccionadas y comentarios por la persona a la que va diriga el regalo.</li>
+        <li>Se recomienda evitar regalos muy personales como ropa y perfumes.</li>
+        <li>No dejar la compra del regalo para último momento. Tómese el tiempo para buscar el obsequio.</li>
+      </ul>
+    </div>
+
+    <br>
+    <hr class="my-4">
+
+    <!-- seccion Formulario -->
+    <div id="formulario" class="container">
+      <h1>Registrarse</h1>
+      <form>
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Introduce un correo">
+        </div>
+        <div class="form-group">
+          <label for="confirmarEmail">Confirmar correo electrónico</label>
+          <input type="email" class="form-control" id="confirmarEmail" aria-describedby="emailHelp" placeholder="">
+        </div>
+        <fieldset class="form-group">
+          <legend>Selecciona máximo 5 opciones de regalo</legend>
+          <div id ="ajusteRadioButtons" class="form-check form-check-inline">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" id="option1" value="option1"> Bálsamo/Labial
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" id="option2" value="option2"> Bombones
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" id="option3" value="option3"> Caramelos
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" id="option4" value="option4"> Gomitas
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" id="option5" value="option5"> Chocolates
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" id="option6" value="option6"> Collar
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" id="option7" value="option7"> Dulces
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" id="option8" value="option8"> Globo de helio
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" id="option9" value="option9"> Peluche
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" id="option10" value="option10"> Reloj
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" id="option11" value="option11"> Rosas
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" id="option12" value="option12"> Termo para cafe
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" id="option13" value="option13"> Taza de cafe
+            </label>
+          </div>
+          <div class="form-check form-check-inline disabled">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" id="option14" value="option14" disabled> 8-untrammelled
+            </label>
+          </div>
+        </fieldset>
+        <div class="form-group">
+          <label for="exampleTextarea">Comentarios</label>
+          <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="Agrega detalles acerca de los regalos como colores, marcas, tamaños, etc."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </div>
+
+    <!-- seccion Footer-->
+    <div id="footer" class="container-fluid">
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+          <div class="carousel-item active">
+            <p style="color:white">Amistad es amigo</p>
+          </div>
+          <div class="carousel-item">
+            <p style="color:white">La amistad duplica las alegrías y divide las angustias por la mitad.<br>-Sir Francis Bacon</p>
+          </div>
+          <div class="carousel-item">
+            <p style="color:white">Amistad es amigo</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $('.carousel').carousel({
+          interval: 2000
+        })
+      var opcionesMarcadas = 0;
+      $(function(){
+        $('input[type="checkbox"]').click(function(){
+          if ($(this).is(':checked'))
+          {
+            if (opcionesMarcadas<5){
+              opcionesMarcadas++;
+              alert("Checado");
+            }
+            else{
+              alert("Ya has seleccionado 5 opciones");
+              $(this).prop('checked',false);
+            }
+          }
+          else
+          {
+            opcionesMarcadas--;
+            alert("Desmarcado");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
