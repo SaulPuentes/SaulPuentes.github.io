@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 export const Hero: React.FC = () => {
+  const [showImage, setShowImage] = useState(false);
   return (
     <section id="hero" className="hero container">
       <div className="hero-grid">
@@ -15,6 +16,10 @@ export const Hero: React.FC = () => {
           <div className="hero-cta">
             <a className="btn" href="#projects">View Projects</a>
             <a className="btn" href="#contact" style={{ background: 'linear-gradient(135deg, var(--accent), var(--primary))' }}>Get in Touch</a>
+            <button className="btn" onClick={() => setShowImage((v) => !v)} type="button">
+              {showImage ? 'Hide Image' : 'Show Image'}
+            </button>
+            <a className="btn" href="/cv/CV.pdf" download>Download CV</a>
           </div>
         </div>
         <div className="hero-card">
@@ -33,6 +38,11 @@ export const Hero: React.FC = () => {
             <span className="pill">Cursor</span>
           </div>
         </div>
+        {showImage && (
+          <div className="hero-card" style={{ gridColumn: '1 / -1' }}>
+            <img src="/cv/img/avatar.jpg" alt="Profile" style={{ width: '100%', borderRadius: 12, display: 'block' }} />
+          </div>
+        )}
       </div>
     </section>
   );

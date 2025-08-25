@@ -15,12 +15,12 @@ const App: React.FC = () => {
       <TechBackground />
       <Navbar />
       <main>
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Experience />
-        <Contact />
+        <div className="section-panel"><Hero /></div>
+        <div className="section-panel"><About /></div>
+        <div className="section-panel"><Skills /></div>
+        <div className="section-panel"><Projects /></div>
+        <div className="section-panel"><Experience /></div>
+        <div className="section-panel"><Contact /></div>
       </main>
       <Footer />
     </div>
