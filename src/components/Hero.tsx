@@ -1,25 +1,74 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 export const Hero: React.FC = () => {
-  const [showImage, setShowImage] = useState(false);
+  const [text, setText] = useState('');
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [phraseIndex, setPhraseIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  
+  const phrases = [
+    "Full Stack Developer | AI-Enhanced Software Engineer",
+    "Building Scalable Platforms with AI-Driven Workflows",
+    "Software Engineer | Web, Cloud & AI-Powered Solutions",
+  ];
+  
+  const currentPhrase = phrases[phraseIndex];
+  
+  useEffect(() => {
+    const typingSpeed = isDeleting ? 30 : 80;
+    const deletingSpeed = 50;
+    
+    if (!isDeleting && currentIndex < currentPhrase.length) {
+      const timeout = setTimeout(() => {
+        setText(currentPhrase.slice(0, currentIndex + 1));
+        setCurrentIndex(currentIndex + 1);
+      }, typingSpeed);
+      return () => clearTimeout(timeout);
+    } else if (isDeleting && currentIndex > 0) {
+      const timeout = setTimeout(() => {
+        setText(currentPhrase.slice(0, currentIndex - 1));
+        setCurrentIndex(currentIndex - 1);
+      }, deletingSpeed);
+      return () => clearTimeout(timeout);
+    } else if (currentIndex === currentPhrase.length && !isDeleting) {
+      // Pause at the end before deleting
+      const timeout = setTimeout(() => {
+        setIsDeleting(true);
+      }, 2000);
+      return () => clearTimeout(timeout);
+    } else if (currentIndex === 0 && isDeleting) {
+      // Move to next phrase
+      setIsDeleting(false);
+      setPhraseIndex((phraseIndex + 1) % phrases.length);
+    }
+  }, [currentIndex, isDeleting, currentPhrase, phraseIndex, phrases.length]);
+
   return (
     <section id="hero" className="hero container">
       <div className="hero-grid">
-        <div>
+        <div className="hero-content">
           <div className="tagline">Full Stack Developer · AI-Augmented Workflows</div>
           <h1>
-            Building modern products with React, Next.js, Node.js — accelerated by AI agents and Cursor.
+            {text}
+            <span className="cursor">|</span>
           </h1>
           <p className="subline">
-            7+ years across SaaS, fintech, and developer tools. I focus on AI-enhanced productivity: rapid prototyping, automated testing, and continuous improvement.
+            I'm a full stack developer who enjoys turning ideas into scalable, resilient software. Over the years, I've shipped
+            production systems with React/Next.js on the front end and Node.js services on the back — containerized with Docker
+            and deployed to AWS. I adopt AI tools pragmatically: AI agents help me generate and evolve tests, while Cursor speeds
+            up implementation without compromising clarity, patterns, or maintainability. My approach is concise, collaborative,
+            and outcome-driven.
           </p>
           <div className="hero-cta">
             <a className="btn" href="#projects">View Projects</a>
             <a className="btn" href="#contact" style={{ background: 'linear-gradient(135deg, var(--accent), var(--primary))' }}>Get in Touch</a>
-            <button className="btn" onClick={() => setShowImage((v) => !v)} type="button">
-              {showImage ? 'Hide Image' : 'Show Image'}
-            </button>
-            <a className="btn" href="/cv/CV.pdf" download>Download CV</a>
+          </div>
+        </div>
+        <div className="hero-image-placeholder">
+          <div className="circle-image">
+            <div className="image-placeholder">
+              <span>Photo</span>
+            </div>
           </div>
         </div>
         <div className="hero-card">
@@ -38,11 +87,6 @@ export const Hero: React.FC = () => {
             <span className="pill">Cursor</span>
           </div>
         </div>
-        {showImage && (
-          <div className="hero-card" style={{ gridColumn: '1 / -1' }}>
-            <img src="/cv/img/avatar.jpg" alt="Profile" style={{ width: '100%', borderRadius: 12, display: 'block' }} />
-          </div>
-        )}
       </div>
     </section>
   );
