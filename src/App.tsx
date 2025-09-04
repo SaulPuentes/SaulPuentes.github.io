@@ -16,7 +16,7 @@ const App: React.FC = () => {
       <Navbar />
       <main>
         <HeroBackground />
-        <Hero />
+        <Hero photoPath="/assets/profile.jpg" />
         <Skills />
         <Projects />
         <Experience />

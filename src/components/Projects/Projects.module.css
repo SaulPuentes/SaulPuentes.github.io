@@ -1,0 +1,22 @@
+/* Projects component specific styles */
+/* Most styles are shared, but we can add project-specific overrides here if needed */
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .projectsGrid { 
+    grid-template-columns: repeat(2, minmax(0, 1fr)); 
+  }
+}
+
+@media (max-width: 600px) {
+  .projectsGrid { 
+    grid-template-columns: 1fr; 
+  }
+}

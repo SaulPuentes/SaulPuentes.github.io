@@ -1,11 +1,12 @@
 import React from 'react';
+import styles from './Skills.module.css';
 
 const Item: React.FC<{ icon: string; label: string }> = ({ icon, label }) => (
-  <div className="skill-item" title={label}>
-    <div className="skill-icon" aria-hidden>
+  <div className={styles.skillItem} title={label}>
+    <div className={styles.skillIcon} aria-hidden>
       <span style={{ fontSize: 16 }}>{icon}</span>
     </div>
-    <div className="skill-label">{label}</div>
+    <div className={styles.skillLabel}>{label}</div>
   </div>
 );
 
@@ -17,7 +18,7 @@ export const Skills: React.FC = () => {
         <div className="card">
           <h3>Core Dev Stack</h3>
           <p>Modern, production-tested technologies for building reliable web apps.</p>
-          <div className="skill-grid">
+          <div className={styles.skillGrid}>
             <Item icon="⚛️" label="React" />
             <Item icon="⏭️" label="Next.js" />
             <Item icon="🟢" label="Node.js" />
@@ -30,7 +31,7 @@ export const Skills: React.FC = () => {
         <div className="card">
           <h3>AI & Automation</h3>
           <p>Practical integrations that enhance speed and quality.</p>
-          <div className="skill-grid">
+          <div className={styles.skillGrid}>
             <Item icon="🤖" label="AI Agents" />
             <Item icon="🔤" label="LLM Integrations" />
             <Item icon="✨" label="Cursor Workflows" />

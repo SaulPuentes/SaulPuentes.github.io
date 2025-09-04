@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './Projects.module.css';
 
 type Project = {
   title: string;
@@ -52,7 +53,7 @@ export const Projects: React.FC = () => {
   return (
     <section id="projects" className="container">
       <h2>Projects / Case Studies</h2>
-      <div className="grid cols-3" style={{ marginTop: 16 }}>
+      <div className={styles.projectsGrid}>
         {projects.map((p) => (
           <div className="card" key={p.title}>
             <h3>{p.title}</h3>
