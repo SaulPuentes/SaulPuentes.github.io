@@ -1,0 +1,32 @@
+/* Timeline */
+.timeline { 
+  position: relative; 
+}
+
+.timeline::before { 
+  content: ''; 
+  position: absolute; 
+  left: 10px; 
+  top: 0; 
+  bottom: 0; 
+  width: 2px; 
+  background: rgba(255,255,255,0.08); 
+}
+
+.timelineItem { 
+  position: relative; 
+  padding-left: 36px; 
+  margin-bottom: 18px; 
+}
+
+.timelineItem::before { 
+  content: ''; 
+  position: absolute; 
+  left: 5px; 
+  top: 6px; 
+  width: 12px; 
+  height: 12px; 
+  background: var(--primary); 
+  border-radius: 999px; 
+  box-shadow: 0 0 0 6px rgba(102,227,255,0.08); 
+}

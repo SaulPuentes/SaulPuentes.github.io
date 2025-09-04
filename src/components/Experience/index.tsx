@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './Experience.module.css';
 
 type ExperienceItem = {
   period: string;
@@ -44,9 +45,9 @@ export const Experience: React.FC = () => {
   return (
     <section id="experience" className="container">
       <h2>Experience</h2>
-      <div className="timeline" style={{ marginTop: 16 }}>
+      <div className={styles.timeline} style={{ marginTop: 16 }}>
         {items.map((item) => (
-          <div className="timeline-item" key={item.period + item.title}>
+          <div className={styles.timelineItem} key={item.period + item.title}>
             <h3>{item.period} · {item.title} — {item.company}</h3>
             <ul>
               {item.achievements.map((a) => (
