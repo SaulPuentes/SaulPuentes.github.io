@@ -67,8 +67,8 @@
 }
 
 .circleImage {
-  width: 140px;
-  height: 140px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--primary), var(--accent));
   display: flex;
@@ -79,16 +79,17 @@
 }
 
 .profilePhoto {
-  width: 126px;
-  height: 126px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid rgba(255, 255, 255, 0.1);
+  filter: grayscale(30%);
 }
 
 .imagePlaceholder {
-  width: 126px;
-  height: 126px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   background: var(--bg);
   display: flex;
