@@ -17,6 +17,13 @@
   transform: translateY(-2px); 
   box-shadow: 0 12px 40px rgba(102, 227, 255, 0.28); 
 }
+.link {
+  color: var(--primary);
+  text-decoration: none;
+}
+.link:hover {
+  text-decoration: underline;
+}
 
 /* Cards/grid */
 .grid { 
